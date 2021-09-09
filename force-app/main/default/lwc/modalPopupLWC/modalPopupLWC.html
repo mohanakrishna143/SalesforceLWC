@@ -1,10 +1,10 @@
 <template>
     <!-- lightning button for open modal window -->
     <lightning-button variant="brand"
-       label="What is Modal/PopUp in LWC?"
-       title="What is Modal/PopUp in LWC?"
+       label="Generate OTP"
+       title="OTP"
        onclick={openModal}
-       class="slds-m-left_x-small">
+       class="slds-var-m-left_x-small">
     </lightning-button>
     <!--Use template if:true to display/hide popup based on isModalOpen value--> 
     <template if:true={isModalOpen}>
@@ -20,23 +20,33 @@
                             size="small" ></lightning-icon>
                         <span class="slds-assistive-text">Close</span>
                     </button>
-                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Modal/PopUp Box header LWC</h2>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">OTP</h2>
                 </header>
                 <!-- Modal/Popup Box LWC body starts here -->
-                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
-                    <label> <b></b>Generate OTP:</label>
+                <div class="slds-modal__content slds-var-p-around_medium" id="modal-content-id-1">
+                    <label style="margin-left: 14px;"> <b>Generate OTP</b></label>
                     <!-- Brand variant: Identifies the primary action in a group of buttons -->
-        <lightning-button variant="brand" label="Brand" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
-
-                    <p><b>Modals/Popup Box are used to display content in a layer above the app.
+                    <div class="slds-var-p-around_medium" style=" padding-left: 0px;">
+                        <lightning-button variant="brand" label="Generate" title="Generate" style=" margin-left: 15px;"
+                        onclick={generateOTPClick} class="slds-var-m-left_x-small"></lightning-button>
+                        <label style="margin-left: 10px;">{messageId}</label>
+                    </div>
+                        <div class="slds-var-p-around_medium">
+                            <!--label> <b>Enter OTP</b><b style="margin-left: 24px;">:</b></label-->
+                            <legend class="slds-form-element__legend slds-form-element__label">Validate OTP</legend>
+                            <lightning-input type="text" placeholder="Enter OTP" style="width: 180px;"></lightning-input> 
+                        </div> 
+                        <lightning-button variant="brand" label="Validate" title="Validate" style=" margin-left: 15px; top: 10px"
+                        onclick={verifyClick} class="slds-var-m-left_x-small"></lightning-button>
+                    <!--p><b>Modals/Popup Box are used to display content in a layer above the app.
                     </b></p>
                     <p><b>This paradigm is used in cases such as the creation or editing of a record, as well as various types of messaging and wizards.
-                    </b></p>
+                    </b></p-->
                 </div>
                 <!-- Modal/Popup Box LWC footer starts here -->
                 <footer class="slds-modal__footer">
                     <button class="slds-button slds-button_neutral" onclick={closeModal} title="Cancel">Cancel</button>
-                    <button class="slds-button slds-button_brand" onclick={submitDetails} title="OK">OK</button>
+                    <!--button class="slds-button slds-button_brand" onclick={submitDetails} title="OK">OK</button-->
                 </footer>
             </div>
         </section>
