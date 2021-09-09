@@ -23,10 +23,15 @@
                     <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Modal/PopUp Box header LWC</h2>
                 </header>
                 <!-- Modal/Popup Box LWC body starts here -->
-                <div class="slds-m-top_small slds-m-bottom_medium" id="modal-content-id-1">
-                    <label> <b>Generate OTP:</b></label>
-                    <lightning-button variant="brand" label="Brand" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
-      
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <label> <b></b>Generate OTP:</label>
+                    <!-- Brand variant: Identifies the primary action in a group of buttons -->
+        <lightning-button variant="brand" label="Brand" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+
+                    <p><b>Modals/Popup Box are used to display content in a layer above the app.
+                    </b></p>
+                    <p><b>This paradigm is used in cases such as the creation or editing of a record, as well as various types of messaging and wizards.
+                    </b></p>
                 </div>
                 <!-- Modal/Popup Box LWC footer starts here -->
                 <footer class="slds-modal__footer">
