@@ -34,7 +34,8 @@
                         <div class="slds-var-p-around_medium">
                             <!--label> <b>Enter OTP</b><b style="margin-left: 24px;">:</b></label-->
                             <legend class="slds-form-element__legend slds-form-element__label">Validate OTP</legend>
-                            <lightning-input type="text" placeholder="Enter OTP" style="width: 180px;"></lightning-input> 
+                            <lightning-input type="text" placeholder="Enter OTP" value={myValue}  
+                            style="width: 180px;"  onchange={handleChange}></lightning-input> 
                         </div> 
                         <lightning-button variant="brand" label="Validate" title="Validate" style=" margin-left: 15px; top: 10px"
                         onclick={verifyClick} class="slds-var-m-left_x-small"></lightning-button>
