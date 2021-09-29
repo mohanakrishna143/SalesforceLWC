@@ -28,7 +28,7 @@
                     <!-- Brand variant: Identifies the primary action in a group of buttons -->
                     <div class="slds-var-p-around_medium" style=" padding-left: 0px;">
                         <lightning-button variant="brand" label="Generate" title="Generate" style=" margin-left: 15px;"
-                        onclick={generateOTPClick} class="slds-var-m-left_x-small"></lightning-button>
+                        onclick={generateOTPClick} disabled={disableFlag} class="slds-var-m-left_x-small"></lightning-button>
                         <label style="margin-left: 10px;">{messageId}</label>
                     </div>
                         <div class="slds-var-p-around_medium">
