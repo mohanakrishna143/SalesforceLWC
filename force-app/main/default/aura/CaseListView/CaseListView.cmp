@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<h1>Case List View</h1>
+    <lightning:listView aura:id="listViewCases"
+    objectApiName="Case"
+    listName="Case_on_the_Issue_Case"
+    rows="5"
+    showSearchBar="true"
+    showActionBar="false"
+    enableInlineEdit="true"
+    showRowLevelActions="false"
+/>
+</aura:component>
