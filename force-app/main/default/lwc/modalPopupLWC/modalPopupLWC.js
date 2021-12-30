@@ -12,7 +12,7 @@ export default class ModalPopupLWC extends LightningElement {
     messageId = "";
    /* render(){
         return this.validate === false?ModalPopupLWC:ChildComponent
-        } */
+        } WHAT ARE YOU DOING */
     openModal() {
         // to open modal set isModalOpen tarck value as true
         this.isModalOpen = true; 
